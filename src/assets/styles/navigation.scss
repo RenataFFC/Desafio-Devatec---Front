@@ -1,0 +1,101 @@
+@import "./configs.scss";
+
+nav {
+  position: fixed;
+  top: 0px;
+   width: 100%;
+ 
+}
+ul{
+  padding: 0px;
+  margin: 8px;
+}
+
+.nav-links {
+  width: 100%;
+  top:70px;
+  flex-direction: column;
+  height: auto;
+  background: linear-gradient(45deg, rgb(156, 14, 156), midnightblue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;  
+   margin-left: -259px;
+  font: $fontBold;
+  color: $primaryColor;
+  gap: 15px;
+
+}
+.items:nth-child(1){
+  border-top: 1px solid rgba(255, 255, 255, 0.555);
+ 
+}
+.items {
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.555);
+  text-align: center;
+  margin-right: 0px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.btn-menu {
+   display: block;  
+    width: 50px;
+    height:50px;    
+    border: none;
+    outline: none;
+    font-size: 22px;
+    background-color: $WhiteColor ;
+    color: $primaryColor;
+    cursor: pointer;    
+}
+
+
+
+
+.ContainerNavigation {
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+  flex-direction: row;
+  background: #ffffff;
+  padding: 8px;
+  gap: 10px;
+
+  
+
+  @media screen and (min-width: $desktopBreakpoint) {
+       nav.navigation {
+      display: flex;
+      width: 200px;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .nav-links {
+        background: $WhiteColor;
+        top:0;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        font: $fontBold;
+        color: $primaryColor;
+        gap: 20px;      
+        margin-left: 40px;  
+      }
+
+      .btn-menu{
+         display: none;
+
+      }
+
+      button{
+        width: 80px;
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
