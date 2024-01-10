@@ -1,4 +1,4 @@
-import { useState } from 'react';
+/*import { useState } from 'react';
 import  Navigation  from './Navigation';
 import Logo from '../assets/imagens/imgLogo.svg';
 
@@ -16,4 +16,4 @@ export const Header = () => {
        <Navigation isOpen={isMenuOpen} />
     </div>
   );
-};
+};*/

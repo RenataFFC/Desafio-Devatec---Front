@@ -19,60 +19,12 @@
 * {
     font-family: $fontRegular;
     font-size: 15px;
-}
-
-html, body {
-    height: 100%;
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;  
 }
 
-#root{
-   // min-height: 100%;
-   // width: 100%;
-   // height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
-    padding: 0;
-}
-
-li{
-list-style:none;
-}
-
-button{
-    width: 50%;
-    height: 48px;
-    background: linear-gradient(45deg, rgb(156, 14, 156), midnightblue);
-    border: none;
-    outline: none;
-    border-radius: 10px;
-    color: $WhiteColor;
-    font-size: 16px;
-    cursor: pointer;
     
-  
-
-    @media screen and (min-width: $desktopBreakpoint) {
-       // background-color: $greyColor;
-
-        &:hover{
-            background-color: $primaryColor;
-        }
-
-        &.disabled{
-            cursor: not-allowed;
-
-            &:hover{
-                background-color: $greyColor;
-            }
-        }
-    }
-}
-
 
 
 .oculto {
@@ -115,4 +67,5 @@ body{
 
 @import './header.scss';
 @import './navigation.scss';
+@import './button.scss';
 

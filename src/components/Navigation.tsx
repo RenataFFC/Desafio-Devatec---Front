@@ -1,42 +1,39 @@
-import {useState, useEffect} from 'react';
+import  { useState } from "react";
+import { MenuItems } from "./MenuItems";
+import Logo from "../assets/imagens/imgLogo.svg";
 import { IoMdMenu } from "react-icons/io";
-
-export default function Navbar() {
-  const [toggleMenu, setToggleMenu] = useState(false)
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+import { MdClose } from "react-icons/md";
+import { Button } from "../components/Button";
 
 
-  const toggleNav = () => {
-    setToggleMenu(!toggleMenu)
-  }
 
-  useEffect(() => {
+const Navbar = () => {
+  const [clicked, setClicked] = useState(false);
 
-    const changeWidth = () => {
-      setScreenWidth(window.innerWidth);
-    }
-
-    window.addEventListener('resize', changeWidth)
-
-    return () => {
-        window.removeEventListener('resize', changeWidth)
-    }
-
-  }, [])
+  const handleClick = () => {
+    setClicked(!clicked);
+  };
 
   return (
-    <div className={"ContainerNavigation"}>
-      <nav className="navigation">
-      {(toggleMenu || screenWidth > 500) && (
-        <ul className="nav-links">
-          <li className='items'><a href="#home">Home</a></li>
-          <li className='items'><a href="#modules">Módulos</a></li>
-          <li className='items'><a href="#users">Usuários</a></li>  
-          <li className='items'><button className="login">Login</button></li>         
-        </ul>
-      )}
-        <button onClick={toggleNav} className="btn-menu"><IoMdMenu size={'35px'} /></button>     
-      </nav>
-    </div>
+    <nav className="NavbarItems">
+      <img className="ImgLogo" src={Logo} alt="Logo " />
+      <div className="menu-icon" onClick={handleClick}>
+        {clicked ? <IoMdMenu /> : <MdClose />}
+      </div>
+      <ul className={clicked ? 'nav-menu active' : 'nav-menu'}>
+        {MenuItems.map((item, index) => (
+          <li key={index}>
+            <a className={item.cName} href={item.url}>
+              {item.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <Button type="button" onClick={() => console.log('Login clicked')} buttonStyle="btn--outline" buttonSize="btn--medium">
+        Login
+      </Button>
+    </nav>
   );
 };
+
+export default Navbar;
