@@ -1,0 +1,28 @@
+@import './configs.scss';
+.footer {
+  background: $backgroundLinear;
+  color: #fff;
+  padding: 20px;
+
+  &__links {
+    display: flex;
+    flex-direction: column; // Por padrão, links empilhados na vertical para dispositivos móveis
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 10px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @media screen and (max-width: $desktopBreakpoint) {
+    &__links {
+      flex-direction: row; // Links alinhados na horizontal
+      justify-content: space-around;
+    }
+  }
+}

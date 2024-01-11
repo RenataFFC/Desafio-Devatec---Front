@@ -1,9 +1,9 @@
 import  { useState } from "react";
 import { MenuItems } from "./MenuItems";
-import Logo from "../assets/imagens/imgLogo.svg";
+import Logo from "../../assets/imagens/imgLogo.svg";
 import { IoMdMenu } from "react-icons/io";
 import { MdClose } from "react-icons/md";
-import { Button } from "../components/Button";
+import { Button } from "../General/Button";
 
 
 

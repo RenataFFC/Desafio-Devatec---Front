@@ -1,13 +1,12 @@
-import { Header } from "../components/Header";
-import { TelaPrincipal } from "../components/General/TelaPrincipal";
-import { Footer} from "../components/General/Footer";
+
+import { Navbar } from "react-bootstrap";
+import TelaPrincipal from "../components/General/TelaPrincipal";
 
 export const Home = () => {
   return (
     <div>
-      <Header />
-      <TelaPrincipal />
-      <Footer/>
+      <Navbar />
+      <TelaPrincipal />   
     </div>
   );
 };

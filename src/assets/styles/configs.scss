@@ -15,4 +15,10 @@ $primaryButton: #3acbf7;
 
 $desktopBreakpoint: 992px;
 
+$primary-linear: rgb(156, 14, 156);
+$secondary-linear: midnightblue;
+
+$backgroundLinear: linear-gradient(45deg, $primary-linear, $secondary-linear);
+
+
 @import '@fortawesome/fontawesome-free/css/all.css';

@@ -1,14 +1,22 @@
-import CursoCard from './components/CursoCard';
-import Navbar from './components/Navigation';
+import React from 'react';
+import Navbar from './components/General/Navbar';
+import TelaPrincipal from './components/General/TelaPrincipal';
+import Footer from './components/General/footer';
+import ScrollToTopButton from './components/General/ScrollToTopButton';
 
-function App() {
-  
+
+const App: React.FC = () => {
   return (
-    <div>
+    <div className="App">
       <Navbar />
-     
+      <TelaPrincipal/>
+      <Footer/>
+      <ScrollToTopButton />
+      
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
+
+

@@ -1,5 +1,5 @@
 import React from 'react';
-import imgCurso from '../assets/imagens/imgSql.jpg'
+import imgModulo from '../../assets/imagens/imgSql.jpg';
 
 
 interface CursoCardProps {
@@ -8,10 +8,10 @@ interface CursoCardProps {
   // Adicione outras propriedades conforme necessário
 }
 
-const CursoCard: React.FC<CursoCardProps> = ({ titulo, imagemUrl }) => {
+const CursoCard: React.FC<CursoCardProps> = ({ titulo }) => {
   return (
     <div className="curso-card">
-      <img src={imgCurso} alt={titulo} className="imgCurso" />
+      <img src={imgModulo} alt={titulo} className="imgModulo" />
       <div className="curso-info">
         <h2>{titulo}</h2>
         {/* Adicione outros detalhes do curso aqui */}
