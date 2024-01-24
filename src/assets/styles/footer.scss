@@ -1,4 +1,5 @@
 @import './configs.scss';
+
 .footer {
   background: $backgroundLinear;
   color: #fff;
@@ -6,7 +7,8 @@
 
   &__links {
     display: flex;
-    flex-direction: column; // Por padrão, links empilhados na vertical para dispositivos móveis
+    flex-direction: row; 
+    justify-content: space-evenly; // Por padrão, links empilhados na vertical para dispositivos móveis
 
     a {
       color: #fff;
@@ -19,10 +21,8 @@
     }
   }
 
-  @media screen and (max-width: $desktopBreakpoint) {
-    &__links {
-      flex-direction: row; // Links alinhados na horizontal
-      justify-content: space-around;
+  @media screen and (min-width: $desktopBreakpoint) {
+  
     }
   }
-}
+

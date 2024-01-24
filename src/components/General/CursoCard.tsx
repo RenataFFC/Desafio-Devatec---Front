@@ -1,23 +1,29 @@
+// CursoCard.tsx
 import React from 'react';
-import imgModulo from '../../assets/imagens/imgSql.jpg';
-
 
 interface CursoCardProps {
   titulo: string;
-  imagemUrl: string;
-  // Adicione outras propriedades conforme necessário
+  imagem_modulo: string; // Corrigido de imagemUrl para imagem_modulo
 }
 
-const CursoCard: React.FC<CursoCardProps> = ({ titulo }) => {
+const CursoCard: React.FC<CursoCardProps> = ({ titulo, imagem_modulo }) => {
+  console.log('Titulo:', titulo);
+  console.log('Imagem URL:', imagem_modulo);
+
+  if (!titulo || !imagem_modulo) {
+    return <div className="curso-card">Dados inválidos!</div>;
+  }
+
   return (
     <div className="curso-card">
-      <img src={imgModulo} alt={titulo} className="imgModulo" />
+      <img src={imagem_modulo} alt={`Imagem do curso ${titulo}`} className="imgModulo" />
       <div className="curso-info">
         <h2>{titulo}</h2>
-        {/* Adicione outros detalhes do curso aqui */}
       </div>
     </div>
   );
 };
 
 export default CursoCard;
+
+

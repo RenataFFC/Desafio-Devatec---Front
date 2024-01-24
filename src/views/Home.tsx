@@ -1,12 +1,18 @@
 
-import { Navbar } from "react-bootstrap";
-import TelaPrincipal from "../components/General/TelaPrincipal";
+import Navbar  from "../components/General/Navbar"
+//import TelaPrincipal from "../components/General/TelaPrincipal";
+import Footer from "../components/General/Footer";
+import Aulas from "../components/General/Aulas";
+
+//import { Login } from "./Login";
+
 
 export const Home = () => {
   return (
     <div>
-      <Navbar />
-      <TelaPrincipal />   
+     <Navbar />
+      <Aulas/>  
+      <Footer/> 
     </div>
   );
 };

@@ -1,0 +1,89 @@
+@import './configs.scss';
+.video-list {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+  width: 100%;
+   height: 120%;  
+  gap: 20px;
+}
+
+.video-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 350px;
+  border: 1px solid #ddd;
+  
+  overflow: hidden;
+
+}
+
+.video-details {
+  width: 100%;
+  padding: 10px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 18px;
+  font-family: $fontBold;
+  text-align: center;
+  color: $thirdColor;
+  
+}
+
+p {
+  margin: 12px 0 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+iframe {
+  margin: 20px;
+  width:324px;
+  height: 500px;
+  border: 2px solid $primaryColor;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: $desktopBreakpoint) {
+  .video-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  iframe {
+    margin: 20px;
+    width:620px;
+    height: 270px;
+    border: 6px solid $thirdColor;
+    border-radius: 10px;
+  }
+
+  .video-details {
+    width: 30%;
+    padding: 10px;
+  }
+  
+  h3 {
+    margin: 0;
+    font-size: 20px;
+  
+    
+  }
+  
+  p {
+    margin: 12px 0 0;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+
+
+
+
+}

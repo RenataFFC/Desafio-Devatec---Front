@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import  { useState } from "react";
 import { MenuItems } from "./MenuItems";
 import Logo from "../../assets/imagens/imgLogo.svg";
@@ -7,11 +8,17 @@ import { Button } from "../General/Button";
 
 
 
+
 const Navbar = () => {
+  const navigate = useNavigate();
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
     setClicked(!clicked);
+  }; 
+
+  const handleLoginClick = () => {
+    navigate('/login');
   };
 
   return (
@@ -29,7 +36,10 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-      <Button type="button" onClick={() => console.log('Login clicked')} buttonStyle="btn--outline" buttonSize="btn--medium">
+      <Button 
+      type="button" 
+      onClick={handleLoginClick}
+      buttonStyle="btn--outline" buttonSize="btn--medium">
         Login
       </Button>
     </nav>
